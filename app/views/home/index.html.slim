@@ -1,106 +1,76 @@
-div class="container"
-  div class="row"
-    div class="col-lg-3"
-      h1 class="my-4" Shop Name
-      div class="list-group"
-        a href="#" class="list-group-item" Category 1
-        a href="#" class="list-group-item" Category 2
-        a href="#" class="list-group-item" Category 3
-    div class="col-lg-9"
-      div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel"
-        ol class="carousel-indicators"
-          li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"
-          li data-target="#carouselExampleIndicators" data-slide-to="1"
-          li data-target="#carouselExampleIndicators" data-slide-to="2"
-        div class="carousel-inner" role="listbox"
-          div class="carousel-item active"
-            img class="d-block img-fluid" src="http://placehold.it/900x350" alt="First slide"
-          div class="carousel-item"
-            img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Second slide"
-          div class="carousel-item"
-            img class="d-block img-fluid" src="http://placehold.it/900x350" alt="Third slide"
-        a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"
-          span class="carousel-control-prev-icon" aria-hidden="true"
-          span class="sr-only" Previous
-        a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"
-          span class="carousel-control-next-icon" aria-hidden="true"
-          span class="sr-only" Next
+div
+  div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000"
+    ol class="carousel-indicators"
+      li data-target="#carousel" data-slide-to="0" class="active"
+      li data-target="#carousel" data-slide-to="1"
+      li data-target="#carousel" data-slide-to="2"
+    div class="carousel-inner" role="listbox"
+        div class="carousel-item active"
+          a href="https://bootstrapcreative.com/"
+            picture
+              source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)"
+              source srcset="https://dummyimage.com/1400x500/#007aeb/4196e5" media="(min-width: 769px)"
+              source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)"
+              img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid"
 
-      div class="row"
-        div class="col-lg-4 col-md-6 mb-4"
-          div class="card h-100"
-            a href="#"
-              img class="card-img-top" src="http://placehold.it/700x400" alt=""
-            div class="card-body"
-              h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-            div class="card-footer"
-              small class="text-muted"
-                | &#9733; &#9733; &#9733; &#9733; &#9734;
+              div class="carousel-caption"
+                div
+                  h2 Digital Craftsmanship
+                  p We meticously build each site to get results
+                  span class="btn btn-sm btn-outline-secondary" Learn More
+                        
+        div class="carousel-item"
+          a href="https://bootstrapcreative.com/"
+            picture
+              source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)"
+              source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)"
+              source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)"
+              img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid"
+                
+              div class="carousel-caption justify-content-center align-items-center"
+                div
+                  h2 Every project begins with a sketch
+                  p We work as an extension of your business to explore solutions
+                  span class="btn btn-sm btn-outline-secondary" Our Process
 
+        div class="carousel-item"
+          a href="https://bootstrapcreative.com/"
+            picture>
+              source srcset="https://dummyimage.com/2000x500/007aeb/4196e5" media="(min-width: 1400px)"
+              source srcset="https://dummyimage.com/1400x500/007aeb/4196e5" media="(min-width: 769px)"
+              source srcset="https://dummyimage.com/800x500/007aeb/4196e5" media="(min-width: 577px)"
+              img srcset="https://dummyimage.com/600x500/007aeb/4196e5" alt="responsive image" class="d-block img-fluid"
+              
+              div class="carousel-caption justify-content-center align-items-center"
+                div
+                  h2 Performance Optimization
+                  p We monitor and optimize your site's long-term performance
+                  span class="btn btn-sm btn-secondary" Learn How
+                      
+    a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"
+      span class="carousel-control-prev-icon" aria-hidden="true"
+      span class="sr-only" Previous
+        
+    a class="carousel-control-next" href="#carousel" role="button" data-slide="next"
+      span class="carousel-control-next-icon" aria-hidden="true">
+      span class="sr-only" Next
+    
+  div class="container" id="content"
+    div class="row"
+      - @products.each do |product|
         div class="col-lg-4 col-md-6 mb-4"
           div class="card h-100"
             a href="#"
               img class="card-img-top" src="http://placehold.it/700x400" alt=""
             div class="card-body"
               h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-            div class="card-footer"
-              small class="text-muted"
-                | &#9733; &#9733; &#9733; &#9733; &#9734;
-
-        div class="col-lg-4 col-md-6 mb-4"
-          div class="card h-100"
-            a href="#"
-              img class="card-img-top" src="http://placehold.it/700x400" alt=""
-            div class="card-body"
-              h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-            div class="card-footer"
-              small class="text-muted"
-                | &#9733; &#9733; &#9733; &#9733; &#9734;
-
-        div class="col-lg-4 col-md-6 mb-4"
-          div class="card h-100"
-            a href="#"
-              img class="card-img-top" src="http://placehold.it/700x400" alt=""
-            div class="card-body"
-              h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-            div class="card-footer"
-              small class="text-muted"
-                | &#9733; &#9733; &#9733; &#9733; &#9734;
-          
-        div class="col-lg-4 col-md-6 mb-4"
-          div class="card h-100"
-            a href="#"
-              img class="card-img-top" src="http://placehold.it/700x400" alt=""
-            div class="card-body"
-              h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
-            div class="card-footer"
-              small class="text-muted"
-                | &#9733; &#9733; &#9733; &#9733; &#9734;
-
-        div class="col-lg-4 col-md-6 mb-4"
-          div class="card h-100"
-            a href="#"
-              img class="card-img-top" src="http://placehold.it/700x400" alt=""
-            div class="card-body"
-              h4 class="card-title"
-                a href="#" Item One
-              h5 $24.99
-              p class="card-text" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!
+                a href="#" 
+                  = product.name
+              h5 
+                |$
+                = product.price
+              p class="card-text" 
+                = product.description
             div class="card-footer"
               small class="text-muted"
                 | &#9733; &#9733; &#9733; &#9733; &#9734;
@@ -108,4 +78,4 @@ div class="container"
 
 footer class="py-5 bg-dark"
   div class="container"
-    p class="m-0 text-center text-white" Copyright &copy; Your Website 2017
+    p class="m-0 text-center text-white" Copyright &copy; Wagner Sodré 2018

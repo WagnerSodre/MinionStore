@@ -1,8 +1,71 @@
  @import "bootstrap";
 
  body {
-    padding-top: 5rem;
+    padding-top: 13rem;
+    background: rgb(250,238,15);
   }
   .starter-template {
     padding: 3rem 1.5rem;
   }
+  /*
+  Removes white gap between slides - chagnge to base color of slide images
+  */
+  .carousel {
+      background:#007aeb;
+    }
+  
+  /*
+  Forces image to be 100% width and not max width of 100%
+  */
+  .carousel-item .img-fluid {
+      width:100%;
+    }
+    
+    /* 
+    anchors are inline so you need ot make them block to go full width
+    */
+    .carousel-item a {
+      display: block;
+      width:100%;
+    }
+
+    #content{
+        padding-top: 2rem;
+    }
+
+    #top{
+        top: 0px;
+    }
+    
+    .fixed-top {
+        height: 10%;
+        position: fixed;
+        top: 7.2rem;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .navbar{
+        background: rgb(31,31,31);
+    }
+
+    .card{
+        background:#007aeb;
+        color: white;
+    } 
+
+    .card a{
+        color: white;
+    } 
+
+    .eye{
+        position: fixed;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 40%;
+        z-index: 1031;
+    }
