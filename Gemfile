@@ -15,6 +15,8 @@ gem 'bootstrap'
 gem 'sprockets-rails'
 gem 'formtastic'
 gem 'jquery-rails'
+gem 'figaro'
+gem 'mailgun-ruby', '~>1.0.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

@@ -1,0 +1,12 @@
+= semantic_form_for @order do |f| 
+  = f.inputs do
+    = f.input :name
+    = f.input :email
+    = f.input :phone
+    = f.select :product_id, Product.all.collect {|x| [x.name, x.id]}, {:include_blank => "Select One"} 
+  end
+
+  = f.actions do 
+    = f.action :submit, :as => :input
+  end
+end

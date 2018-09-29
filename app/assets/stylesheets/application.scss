@@ -83,6 +83,16 @@
         background:#007aeb;
         padding: 3rem;
         border-radius: 25px;
+        color: white;
+    }
+
+    #details {
+        padding-top: 2rem;
+    }
+
+    #order_submit_action > input[type="submit"] {
+        border-radius: 25px;
+        padding: 5px;
     }
 
     footer{

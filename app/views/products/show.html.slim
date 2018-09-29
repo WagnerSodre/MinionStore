@@ -19,10 +19,24 @@ div
               span class="sr-only" Next
         - else
           img =image_tag("confused.png", class: "d-block w-100", size: "100x600") 
-      div class="col-4"
+      div class="col-4" id="details"
         h1
           = @product.name
         h3 
           = @product.price
         p class="card-text" 
           = @product.description
+        hr
+        = semantic_form_for @order do |f| 
+          = f.inputs do
+            = f.input :name, :as => :string
+            = f.input :email, :as => :email
+            = f.input :phone, :as => :phone
+            = f.input :product_id, :as => :hidden, :input_html => { :value => @product.id }
+          end
+
+          = f.actions do 
+            = f.action :submit, :as => :input
+          end
+        end
+

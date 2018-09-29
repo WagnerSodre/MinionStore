@@ -56,6 +56,8 @@ div
       span class="sr-only" Next
     
   div class="container" id="content"
+    - if (notice != nil)
+      p id="notice" class="alert alert-success" = notice
     div class="row"
       - @products.each do |product|
         div class="col-lg-4 col-md-6 mb-4"
